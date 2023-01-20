@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-export const AddCategory = ({setCategories}) => {
-  const [inputValue, setInputValue] = useState('DBZ');
+export const AddCategory = ({onAddCategories}) => {
+  console.log(AddCategory);
+  const [inputValue, setInputValue] = useState('');
   const inputChange = ({target})=>{
     setInputValue(target.value) 
   }
   const onSubmit = e =>{
     e.preventDefault()
-    setCategories(categories=>[inputValue,...categories])
+    onAddCategories(categories=>[inputValue,...categories])
     console.log(inputValue);
   } 
     
