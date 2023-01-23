@@ -7,6 +7,7 @@ export const AddCategory = ({onAddCategories}) => {
   }
   const onSubmit = e =>{
     e.preventDefault()
+    if(inputValue.trim().length >= 1) return
     onAddCategories(categories=>[inputValue,...categories])
     setInputValue('')
   } 
