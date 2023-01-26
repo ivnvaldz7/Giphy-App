@@ -2,9 +2,9 @@ import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 
 export const GifApp = () => {
-  const [categories, setCategories] = useState(["Dragon Ball", "Valorant"]);
+  const [categories, setCategories] = useState(['Fortnite']);
   const onAddCategory = (newValue) => {
-    console.log(newValue);
+    if(categories.includes(newValue)) return
     setCategories([...categories, newValue]);
   };
   return (
