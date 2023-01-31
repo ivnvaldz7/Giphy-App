@@ -4,10 +4,9 @@ export const getGifs = async ({ category }) => {
   );
   const { data } = await url.json();
   const gifs = data.map((gif) => ({
-    title: gif.id,
     id: gif.id,
     img: gif.images.downsized_medium.url,
+    title: gif.title
   }));
-  console.log(gifs)
   return gifs;
 };
