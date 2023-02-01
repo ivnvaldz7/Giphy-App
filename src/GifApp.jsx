@@ -6,7 +6,7 @@ export const GifApp = () => {
   const [categories, setCategories] = useState([]);
   const onAddCategory = (newValue) => {
     if(categories.includes(newValue)) return
-    setCategories([...categories, newValue]);
+    setCategories([newValue, ...categories]);
   };
   return (
     <>
